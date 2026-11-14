@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive CSS-only solar system featuring animated planetary orbits, moons, and glassmorphic planet information.">
+  <meta name="author" content="Stephen Oyugi">
+  <meta name="theme-color" content="#050713">
+
+  <title>ORBITAL — CSS Solar System</title>
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main class="universe">
+
+    <header class="topbar">
+      <a href="#" class="brand" aria-label="Orbital home">
+        <span class="brand-icon">✦</span>
+        ORBITAL<span> / 01</span>
+      </a>
+
+      <div class="system-indicator">
+        <span class="live-dot"></span>
+        SOLAR SYSTEM SIMULATION
+      </div>
+
+      <a href="#mission" class="header-link">MISSION NOTES ↗</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> AN EXPERIMENT IN CSS MOTION</p>
+
+        <h1>THE<br><span>SOLAR SYSTEM</span></h1>
+
+        <p class="hero-description">
+          Eight planets. Countless orbital paths. One star at the centre.
+          Explore a CSS-powered interpretation of our cosmic neighbourhood.
+        </p>
+
+        <div class="hero-tags">
+          <span>PURE CSS</span>
+          <span>ORBITAL MOTION</span>
+          <span>3D VISUAL DESIGN</span>
+        </div>
+      </div>
+
+      <div class="hero-stat">
+        <span class="stat-label">CELESTIAL BODIES</span>
+        <strong>08</strong>
+        <span class="stat-caption">PLANETS IN ORBIT</span>
+      </div>
+    </section>
+
+    <section class="solar-section" aria-labelledby="solar-heading">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / CELESTIAL MAP</p>
+          <h2 id="solar-heading">Explore the orbits</h2>
+        </div>
+
+        <span class="section-meta">HELIocentric VIEW / CSS SIMULATION</span>
+      </div>
+
+      <div class="solar-viewport">
+
+        <div class="space-grid"></div>
+
+        <div class="stars" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+
+        <div class="solar-system">
+
+          <!-- SUN -->
+          <div class="sun" tabindex="0" role="group"
+               aria-label="Sun, the star at the centre of the solar system">
+            <div class="sun-core"></div>
+            <div class="sun-corona"></div>
+            <div class="sun-label">SUN</div>
+
+            <div class="tooltip sun-tooltip">
+              <strong>The Sun</strong>
+              <span>Our solar system's central star.</span>
+              <small>TYPE: G-TYPE MAIN-SEQUENCE STAR</small>
+            </div>
+          </div>
+
+          <!-- MERCURY -->
+          <div class="orbit orbit-mercury">
+            <div class="planet-holder">
+              <div class="planet mercury" tabindex="0" role="group"
+                   aria-label="Mercury, the closest planet to the Sun">
+                <span class="planet-label">MERCURY</span>
+                <div class="tooltip">
+                  <strong>Mercury</strong>
+                  <span>The smallest planet and closest to the Sun.</span>
+                  <small>ORBITAL PERIOD: 88 EARTH DAYS</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VENUS -->
+          <div class="orbit orbit-venus">
+            <div class="planet-holder">
+              <div class="planet venus" tabindex="0" role="group"
+                   aria-label="Venus, the second planet from the Sun">
+                <span class="planet-label">VENUS</span>
+                <div class="tooltip">
+                  <strong>Venus</strong>
+                  <span>A rocky planet with an extremely dense atmosphere.</span>
+                  <small>ORBITAL PERIOD: 225 EARTH DAYS</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EARTH -->
+          <div class="orbit orbit-earth">
+            <div class="planet-holder">
+              <div class="planet earth" tabindex="0" role="group"
+                   aria-label="Earth, our home planet">
+                <span class="planet-label">EARTH</span>
+
+                <div class="moon-orbit">
+                  <div class="moon"></div>
+                </div>
+
+                <div class="tooltip">
+                  <strong>Earth</strong>
+                  <span>Our home planet, with liquid water on its surface.</span>
+                  <small>ORBITAL PERIOD: 365.25 EARTH DAYS</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MARS -->
+          <div class="orbit orbit-mars">
+            <div class="planet-holder">
+              <div class="planet mars" tabindex="0" role="group"
+                   aria-label="Mars, the red planet">
+                <span class="planet-label">MARS</span>
+                <div class="tooltip">
+                  <strong>Mars</strong>
+                  <span>The red planet, home to Olympus Mons.</span>
+                  <small>ORBITAL PERIOD: 687 EARTH DAYS</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JUPITER -->
+          <div class="orbit orbit-jupiter">
+            <div class="planet-holder">
+              <div class="planet jupiter" tabindex="0" role="group"
+                   aria-label="Jupiter, the largest planet">
+                <span class="planet-label">JUPITER</span>
+
+                <div class="moon-orbit jupiter-moon-orbit">
+                  <div class="moon jupiter-moon"></div>
+                </div>
+
+                <div class="tooltip">
+                  <strong>Jupiter</strong>
+                  <span>The largest planet, known for its Great Red Spot.</span>
+                  <small>ORBITAL PERIOD: 11.86 EARTH YEARS</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SATURN -->
+          <div class="orbit orbit-saturn">
+            <div class="planet-holder">
+              <div class="planet saturn" tabindex="0" role="group"
+                   aria-label="Saturn, the ringed planet">
+                <span class="saturn-ring"></span>
+                <span class="planet-label">SATURN</span>
+
+                <div class="tooltip">
+                  <strong>Saturn</strong>
+                  <span>A gas giant famous for its spectacular ring system.</span>
+                  <small>ORBITAL PERIOD: 29.45 EARTH YEARS</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- URANUS -->
+          <div class="orbit orbit-uranus">
+            <div class="planet-holder">
+              <div class="planet uranus" tabindex="0" role="group"
+                   aria-label="Uranus, the ice giant">
+                <span class="planet-label">URANUS</span>
+                <div class="tooltip">
+                  <strong>Uranus</strong>
+                  <span>An ice giant that rotates on a dramatically tilted axis.</span>
+                  <small>ORBITAL PERIOD: 84 EARTH YEARS</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NEPTUNE -->
+          <div class="orbit orbit-neptune">
+            <div class="planet-holder">
+              <div class="planet neptune" tabindex="0" role="group"
+                   aria-label="Neptune, the most distant major planet">
+                <span class="planet-label">NEPTUNE</span>
+                <div class="tooltip">
+                  <strong>Neptune</strong>
+                  <span>A distant ice giant with powerful atmospheric winds.</span>
+                  <small>ORBITAL PERIOD: 164.8 EARTH YEARS</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="viewport-footer">
+          <span>FIG 001 — HELIOCENTRIC ORBITAL MODEL</span>
+          <span>HOVER OR FOCUS A PLANET TO PAUSE ITS ORBIT</span>
+        </div>
+
+      </div>
+
+      <div class="legend">
+        <span><i class="legend-sun"></i> STAR</span>
+        <span><i class="legend-planet"></i> PLANET</span>
+        <span><i class="legend-moon"></i> MOON</span>
+        <span><i class="legend-ring"></i> ORBITAL PATH</span>
+      </div>
+
+    </section>
+
+    <section class="planet-facts">
+
+      <div class="facts-heading">
+        <p class="eyebrow">02 / PLANETARY DATA</p>
+        <h2>Eight worlds. One system.</h2>
+      </div>
+
+      <div class="facts-grid">
+
+        <article class="fact-card">
+          <span class="fact-number">01</span>
+          <span class="fact-dot mercury-dot"></span>
+          <h3>Mercury</h3>
+          <p>Closest to the Sun</p>
+          <strong>88 <small>DAYS</small></strong>
+        </article>
+
+        <article class="fact-card">
+          <span class="fact-number">02</span>
+          <span class="fact-dot venus-dot"></span>
+          <h3>Venus</h3>
+          <p>Hottest planet</p>
+          <strong>225 <small>DAYS</small></strong>
+        </article>
+
+        <article class="fact-card">
+          <span class="fact-number">03</span>
+          <span class="fact-dot earth-dot"></span>
+          <h3>Earth</h3>
+          <p>Our home planet</p>
+          <strong>365 <small>DAYS</small></strong>
+        </article>
+
+        <article class="fact-card">
+          <span class="fact-number">04</span>
+          <span class="fact-dot mars-dot"></span>
+          <h3>Mars</h3>
+          <p>The red planet</p>
+          <strong>687 <small>DAYS</small></strong>
+        </article>
+
+        <article class="fact-card">
+          <span class="fact-number">05</span>
+          <span class="fact-dot jupiter-dot"></span>
+          <h3>Jupiter</h3>
+          <p>Largest planet</p>
+          <strong>11.86 <small>YEARS</small></strong>
+        </article>
+
+        <article class="fact-card">
+          <span class="fact-number">06</span>
+          <span class="fact-dot saturn-dot"></span>
+          <h3>Saturn</h3>
+          <p>Planet with famous rings</p>
+          <strong>29.45 <small>YEARS</small></strong>
+        </article>
+
+        <article class="fact-card">
+          <span class="fact-number">07</span>
+          <span class="fact-dot uranus-dot"></span>
+          <h3>Uranus</h3>
+          <p>Ice giant</p>
+          <strong>84 <small>YEARS</small></strong>
+        </article>
+
+        <article class="fact-card">
+          <span class="fact-number">08</span>
+          <span class="fact-dot neptune-dot"></span>
+          <h3>Neptune</h3>
+          <p>Farthest major planet</p>
+          <strong>164.8 <small>YEARS</small></strong>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="engineering" id="mission">
+      <div>
+        <p class="eyebrow">03 / ENGINEERING NOTES</p>
+        <h2>Mathematics meets<br><span>CSS animation.</span></h2>
+      </div>
+
+      <p>
+        Each planet travels around the Sun through a dedicated CSS animation.
+        Nested orbital containers create independent motion for moons, while
+        focus and hover states reveal planet information and pause selected
+        orbital animations. The speeds and dimensions are illustrative design
+        values, not a scientifically scaled orbital simulation.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <a href="#" class="brand">
+        <span class="brand-icon">✦</span>
+        ORBITAL<span> / 01</span>
+      </a>
+
+      <p>Designed and developed by <strong>Stephen Oyugi</strong></p>
+
+      <p>HTML5 · CSS3 · ORBITAL MOTION</p>
+    </footer>
+
+  </main>
+</body>
+</html>
